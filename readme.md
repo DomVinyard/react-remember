@@ -5,7 +5,7 @@
 From anywhere in your application:
 
 ```js
-remember({answer: 42})
+remember({ answer: 42 });
 ```
 
 From anywhere else in your application:
@@ -49,6 +49,14 @@ const Info = () => {
     const [the, remember] = useRemember()
     return <div>Button clicked {the.count} times</div>
 }
+```
+
+### Explorer
+
+View a list of what's been remembered by adding the `show` property to the Rememberer.
+
+```js
+<Rememberer show />
 ```
 
 ### FAQ
