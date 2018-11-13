@@ -5664,13 +5664,6 @@ react-object-inspector@0.2.1:
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/react-object-inspector/-/react-object-inspector-0.2.1.tgz#8ec32951bde8c76b072ef084a74e7a9d2d0aeb72"
 
-react-remember@^1.1.6:
-  version "1.1.6"
-  resolved "https://registry.yarnpkg.com/react-remember/-/react-remember-1.1.6.tgz#cf0607c8fa236d2fb6f9c228205e559651e6a9fc"
-  dependencies:
-    local-storage "1.4.2"
-    react-object-inspector "0.2.1"
-
 react@^16.7.0-alpha.0:
   version "16.7.0-alpha.0"
   resolved "https://registry.yarnpkg.com/react/-/react-16.7.0-alpha.0.tgz#e2ed4abe6f268c9b092a1d1e572953684d1783a9"

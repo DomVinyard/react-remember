@@ -2,7 +2,7 @@
 
 [![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE)
 
-> Persistant global state in React using Hooks & Context. ([Demo](https://codesandbox.io/s/3rq4rn30op))
+> Persistent global state in React using Hooks & Context. ([Demo](https://codesandbox.io/s/nnvzpkjxj))
 
 ### Quick start
 
@@ -29,21 +29,21 @@ From anywhere else in your application:
 
 Install with `yarn add react-remember` or `npm install react-remember`.
 
-Wrap your app with the Rememberer:
+Wrap your top-level app with The Rememberer™:
 
 ```js
 import Rememberer from ‘react-remember’
 const App = () => {
     return (
         <Rememberer>
-            // Wrap your app with Rememberer
+            // Top level App component goes here
         </Rememberer>
     )
 }
 ReactDOM(<App />, root)
 ```
 
-Now you can useRemember in any component. Data will persist between refreshes.
+Now you can useRemember in any component. The data will be available everywhere, updatable from anywhere and will persist between refreshes.
 
 ```js
 const Button = () => {
