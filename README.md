@@ -46,6 +46,8 @@ ReactDOM(<App />, root)
 Now you can useRemember in any component. The data will be available everywhere, updatable from anywhere and will persist between refreshes.
 
 ```js
+import { useRemember } from 'react-remember'
+
 const Button = () => {
   const [the, remember] = useRemember();
   return (
