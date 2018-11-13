@@ -4,13 +4,13 @@
 
 From anywhere in your application:
 
-```
+```js
 remember({answer: 42})
 ```
 
 From anywhere else in your application:
 
-```
+```js
 <div>{the.answer}</div>
 // displays 42
 ```
@@ -21,7 +21,7 @@ Install with `yarn add react-remember` or `npm install react-remember`.
 
 Wrap your app with the Rememberer:
 
-```
+```js
 import Rememberer from ‘react-remember’
 const App = () => {
     return (
@@ -35,7 +35,7 @@ ReactDOM(<App />, root)
 
 Now you can useRemember in any component.
 
-```
+```js
 const Button = () => {
    const [the, remember] = useRemember()
    return (
