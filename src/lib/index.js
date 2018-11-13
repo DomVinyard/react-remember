@@ -51,8 +51,8 @@ class Rememberer extends React.Component {
       <Context.Provider
         value={{
           useRemember: [
-            val => !this.noPersist && this.setState(val),
-            this.state
+            this.state,
+            val => !this.noPersist && this.setState(val)
           ]
         }}
       >
