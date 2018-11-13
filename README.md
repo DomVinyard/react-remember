@@ -2,7 +2,9 @@
 
 [![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE)
 
-> Global state in React using Hooks & Context. ([Demo](https://codesandbox.io/s/3rq4rn30op)) that persists between refreshes.
+> Persistant global state in React using Hooks & Context. ([Demo](https://codesandbox.io/s/3rq4rn30op))
+
+### Quick start
 
 Include the useRemember hook in a component:
 
@@ -41,7 +43,7 @@ const App = () => {
 ReactDOM(<App />, root)
 ```
 
-Now you can useRemember in any component.
+Now you can useRemember in any component. Data will persist between refreshes.
 
 ```js
 const Button = () => {

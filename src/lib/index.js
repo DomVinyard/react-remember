@@ -12,7 +12,11 @@ class Rememberer extends React.Component {
   }
 
   componentDidMount() {
-    this.setState(local.get("state"));
+    try {
+      this.setState(local.get("state"));
+    } catch (error) {
+      console.log("nothing to restore");
+    }
   }
 
   clearState() {
@@ -21,8 +25,7 @@ class Rememberer extends React.Component {
   }
 
   renderTree() {
-    if (!Object.keys(this.state).length)
-      return "nothing remembered (link to docs)";
+    if (!Object.keys(this.state).length) return "nothing to remember";
     return (
       <div>
         <div style={{ marginBottom: "1rem" }}>
@@ -66,5 +69,5 @@ export default Rememberer;
 
 export const useRemember = function Consumer() {
   const { useRemember } = useContext(Context);
-  return useRemember;
+  return useRemember || [];
 };

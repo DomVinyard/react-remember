@@ -8,16 +8,8 @@ const Number = () => {
 
 const Button = () => {
   const [the, remember] = useRemember();
-  console.log(the, remember);
   return (
-    <button
-      onClick={() => {
-        console.log(the, remember);
-        remember({ number: Math.random() });
-      }}
-    >
-      regen
-    </button>
+    <button onClick={() => remember({ number: Math.random() })}>regen</button>
   );
 };
 
