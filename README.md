@@ -1,8 +1,14 @@
-[![NPM](https://nodei.co/npm/react-remember.png)](https://nodei.co/npm/react-remember/)
-
 # 🤔 React Remember
 
-> Global state in React using Hooks & Context. ([Demo](https://codesandbox.io/s/3rq4rn30op)).
+[![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE)
+
+> Global state in React using Hooks & Context. ([Demo](https://codesandbox.io/s/3rq4rn30op)) that persists between refreshes.
+
+Include the useRemember hook in a component:
+
+```js
+const [the, remember] = useRemember();
+```
 
 From anywhere in your application:
 
@@ -39,18 +45,18 @@ Now you can useRemember in any component.
 
 ```js
 const Button = () => {
-   const [the, remember] = useRemember()
-   return (
-        <button onClick={() => remember({count: ++the.count || 1})}>
-            click me
-        <button>
-    )
-}
+  const [the, remember] = useRemember();
+  return (
+    <button onClick={() => remember({ count: ++the.count || 1 })}>
+      click me
+    </button>
+  );
+};
 
 const Info = () => {
-    const [the, remember] = useRemember()
-    return <div>Button clicked {the.count} times</div>
-}
+  const [the, remember] = useRemember();
+  return <div>Button clicked {the.count} times</div>;
+};
 ```
 
 ### Explorer
