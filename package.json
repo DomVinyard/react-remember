@@ -21,7 +21,8 @@
   "license": "MIT",
   "dependencies": {
     "local-storage": "1.4.2",
-    "react-object-inspector": "0.2.1"
+    "react-object-inspector": "0.2.1",
+    "react-remember": "^1.1.6"
   },
   "devDependencies": {
     "autoprefixer": "7.1.6",
