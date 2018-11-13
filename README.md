@@ -1,8 +1,9 @@
 # 🤔 React Remember
 
+> Persistent global state in React using Hooks & Context. ([Demo](https://codesandbox.io/s/nnvzpkjxj))
+
 [![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE)
 
-> Persistent global state in React using Hooks & Context. ([Demo](https://codesandbox.io/s/nnvzpkjxj))
 
 ### Quick start
 
