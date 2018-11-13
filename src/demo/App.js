@@ -1,6 +1,5 @@
 import React from "react";
-// import Rememberer, { useRemember } from "../lib";
-import Rememberer, { useRemember } from "react-remember";
+import Rememberer, { useRemember } from "../lib";
 
 const Number = () => {
   const [the, remember] = useRemember();
