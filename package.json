@@ -1,6 +1,6 @@
 {
   "name": "react-remember",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Global state in React",
   "keywords": [],
   "main": "src/index.mjs",
