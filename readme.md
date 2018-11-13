@@ -2,6 +2,8 @@
 
 > Global state in React using Hooks & Context. ([Demo](https://codesandbox.io/s/3rq4rn30op)).
 
+[![NPM](https://nodei.co/npm/react-remember.png)](https://nodei.co/npm/react-remember/)
+
 From anywhere in your application:
 
 ```js
