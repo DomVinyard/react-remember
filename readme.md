@@ -1,8 +1,8 @@
 # 🤔 React Remember
 
-> Global state in React using Hooks & Context. ([Demo](https://codesandbox.io/s/3rq4rn30op)).
-
 [![NPM](https://nodei.co/npm/react-remember.png)](https://nodei.co/npm/react-remember/)
+
+> Global state in React using Hooks & Context. ([Demo](https://codesandbox.io/s/3rq4rn30op)).
 
 From anywhere in your application:
 
