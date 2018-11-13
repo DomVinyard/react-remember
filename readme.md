@@ -1,3 +1,5 @@
+[![NPM](https://nodei.co/npm/react-remember.png)](https://nodei.co/npm/react-remember/)
+
 # 🤔 React Remember
 
 > Global state in React using Hooks & Context. ([Demo](https://codesandbox.io/s/3rq4rn30op)).
