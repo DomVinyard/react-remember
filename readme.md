@@ -29,14 +29,14 @@ From anywhere else in your application:
 
 Install with `yarn add react-remember` or `npm install react-remember`.
 
-Wrap your top-level app with The Rememberer™:
+Wrap your top-level app with the Rememberer™:
 
 ```js
 import Rememberer from ‘react-remember’
 const App = () => {
     return (
         <Rememberer>
-            // Top level App component goes here
+            // standard app.js stuff in here
         </Rememberer>
     )
 }

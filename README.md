@@ -1,9 +1,8 @@
 # 🤔 React Remember
 
-> Persistent global state in React using Hooks & Context. ([Demo](https://codesandbox.io/s/nnvzpkjxj))
-
 [![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE)
 
+> Persistent global state in React using Hooks & Context. ([Demo](https://codesandbox.io/s/nnvzpkjxj))
 
 ### Quick start
 
@@ -30,14 +29,14 @@ From anywhere else in your application:
 
 Install with `yarn add react-remember` or `npm install react-remember`.
 
-Wrap your top-level app with The Rememberer™:
+Wrap your top-level app with the Rememberer™:
 
 ```js
 import Rememberer from ‘react-remember’
 const App = () => {
     return (
         <Rememberer>
-            // Top level App component goes here
+            // standard app.js stuff in here
         </Rememberer>
     )
 }
