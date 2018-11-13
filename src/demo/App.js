@@ -2,12 +2,12 @@ import React from "react";
 import Rememberer, { useRemember } from "../lib";
 
 const Number = () => {
-  const [remember, the] = useRemember();
+  const [the, remember] = useRemember();
   return <p>{the.number || 0}</p>;
 };
 
 const Button = () => {
-  const [remember, the] = useRemember();
+  const [the, remember] = useRemember();
   return (
     <button onClick={() => remember({ number: Math.random() })}>regen</button>
   );
