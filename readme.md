@@ -27,7 +27,7 @@ From anywhere else in your application:
 
 ### Installation & Usage
 
-> 🚨 Hooks are a new feature proposal that lets you use state and other React features without writing a class. They’re currently in React v16.7.0-alpha and being discussed in [an open RFC](https://github.com/reactjs/rfcs/pull/68). If you're using a React version < 16.7, this will not work.
+> 🚨 Hooks are a new feature proposal that lets you use state and other React features without writing a class. They’re currently in React v16.7.0-alpha and being discussed in [an open RFC](https://github.com/reactjs/rfcs/pull/68). **If you're using a React version < 16.7, this module will not work.**
 
 Install with `yarn add react-remember` or `npm install react-remember`.
 
