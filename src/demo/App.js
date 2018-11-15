@@ -15,7 +15,7 @@ const Button = () => {
 
 const App = () => {
   return (
-    <Rememberer>
+    <Rememberer show defaults={{ number: 1 }}>
       <h1>number</h1>
       <Number />
       <Number />

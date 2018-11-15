@@ -12,7 +12,9 @@ class Rememberer extends React.Component {
 
   componentDidMount() {
     try {
-      this.setState(local.get("state"));
+      const localState = local.get("state");
+      console.log(localState);
+      this.setState(localState || this.defaults);
     } catch (error) {
       console.log("nothing to restore");
     }
@@ -30,7 +32,12 @@ class Rememberer extends React.Component {
         <div style={{ marginBottom: "1rem" }}>
           <span style={{ fontSize: "1.2rem" }}>Remembered</span>
           <span style={{ float: "right" }}>
-            <button onClick={this.clearState.bind(this)}> 💣 Delete All</button>
+            <button onClick={this.clearState.bind(this)}>
+              <span role="img" aria-label="delete">
+                💣
+              </span>{" "}
+              Delete All
+            </button>
           </span>
         </div>
         <ObjectInspector
@@ -43,7 +50,8 @@ class Rememberer extends React.Component {
   }
 
   render() {
-    const { children, show } = this.props;
+    const { children, show, defaults } = this.props;
+    this.defaults = defaults || {};
     if (show) return this.renderTree();
     return (
       <Context.Provider
