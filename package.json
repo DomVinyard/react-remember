@@ -1,6 +1,6 @@
 {
   "name": "react-remember",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "description": "🤔 Global state in React",
   "main": "build/index.js",
   "scripts": {
@@ -19,6 +19,12 @@
   },
   "homepage": "https://github.com/DomVinyard/react-remember#readme",
   "license": "MIT",
+  "keywords": [
+    "hooks",
+    "global",
+    "context",
+    "state"
+  ],
   "dependencies": {
     "local-storage": "1.4.2",
     "react-object-inspector": "0.2.1"
