@@ -1,6 +1,6 @@
 {
   "name": "react-remember",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "🤔 Global state in React",
   "main": "build/index.js",
   "scripts": {

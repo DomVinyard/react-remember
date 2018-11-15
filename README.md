@@ -4,9 +4,7 @@
 
 [![npm version](https://badge.fury.io/js/react-remember.svg)](https://badge.fury.io/js/react-remember) [![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE)
 
-<aside class="warning">
->🚨 Hooks are a new feature proposal that lets you use state and other React features without writing a class. They’re currently in React v16.7.0-alpha and being discussed in [an open RFC](https://github.com/reactjs/rfcs/pull/68). If you're using a React version < 16.7, this will not work.
-</aside>
+> 🚨 Hooks are a new feature proposal that lets you use state and other React features without writing a class. They’re currently in React v16.7.0-alpha and being discussed in [an open RFC](https://github.com/reactjs/rfcs/pull/68). If you're using a React version < 16.7, this will not work.
 
 ### Quick start
 
