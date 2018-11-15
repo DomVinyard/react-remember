@@ -7,7 +7,6 @@ class Rememberer extends React.Component {
   state = {};
 
   componentDidUpdate() {
-    if (this.noPersist) return local.remove("state");
     local.set("state", this.state);
   }
 
@@ -44,19 +43,12 @@ class Rememberer extends React.Component {
   }
 
   render() {
-    const { children, show, noPersist } = this.props;
-    if (noPersist && !this.clearedForNoPersist) {
-      this.clearedForNoPersist = true;
-      local.remove("state");
-    }
+    const { children, show } = this.props;
     if (show) return this.renderTree();
     return (
       <Context.Provider
         value={{
-          useRemember: [
-            this.state,
-            val => !this.noPersist && this.setState(val)
-          ]
+          useRemember: [this.state, val => this.setState(val)]
         }}
       >
         {children}
