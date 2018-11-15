@@ -30,15 +30,19 @@ class Rememberer extends React.Component {
     return (
       <div>
         <div style={{ marginBottom: "1rem" }}>
-          <span style={{ fontSize: "1.2rem" }}>Remembered</span>
-          <span style={{ float: "right" }}>
-            <button onClick={this.clearState.bind(this)}>
-              <span role="img" aria-label="delete">
-                💣
-              </span>{" "}
-              Delete All
+          <span style={{ fontSize: "1.2rem" }}>Defaults</span>
+          <ObjectInspector name="default" data={this.defaults} />
+          <div style={{ fontSize: "1.2rem", paddingTop: "2rem" }}>
+            Remembered
+            <button
+              style={{ marginLeft: "8px" }}
+              onClick={this.clearState.bind(this)}
+            >
+              <span role="img" aria-label="reset">
+                🔄 Reset to defaults
+              </span>
             </button>
-          </span>
+          </div>
         </div>
         <ObjectInspector
           initialExpandedPaths={["root"]}

@@ -65,12 +65,27 @@ const Info = () => {
 };
 ```
 
+### Defaults
+
+Defaults are the values that are instantiated on first launch. Here we set user as a blank object, this is a good way to segment your global state. We can now `remember({ user.name: 'dom' });`.
+
+```js
+<Rememberer
+  defaults={{
+    count: 42,
+    user: {}
+  }}
+>
+  ...
+</Rememberer>
+```
+
 ### Explorer
 
 View a list of what's been remembered by adding the `show` property to the Rememberer.
 
 ```js
-<Rememberer show />
+<Rememberer show>...</Rememberer>
 ```
 
 ### FAQ
