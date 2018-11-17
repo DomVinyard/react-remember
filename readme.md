@@ -35,6 +35,7 @@ Wrap your top-level app with the Rememberer™:
 
 ```js
 import Rememberer from ‘react-remember’
+
 const App = () => {
     return (
         <Rememberer>
@@ -48,6 +49,8 @@ ReactDOM(<App />, root)
 Now you can useRemember in any component. The data will be available everywhere, updatable from anywhere and will persist between refreshes.
 
 ```js
+import { useRemember } from ‘react-remember’
+
 const Button = () => {
   const [the, remember] = useRemember();
   return (
@@ -65,7 +68,7 @@ const Info = () => {
 
 ## Defaults
 
-Defaults are the values that are instantiated on first launch. Here we set user as a blank object, this is a good way to segment your global state. We can now `remember({ user.name: 'dom' });`.
+Defaults are the values that are instantiated on first launch. 
 
 ```js
 <Rememberer
