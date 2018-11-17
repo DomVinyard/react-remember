@@ -7,14 +7,15 @@ class Rememberer extends React.Component {
   state = {};
 
   componentDidUpdate() {
+    if (!this.state || Object.keys(this.state).length === 0) return
     local.set("state", this.state);
   }
 
   componentDidMount() {
     try {
       const localState = local.get("state");
-      console.log(localState);
-      this.setState(localState || this.defaults);
+      if (localState && !Object.keys(localState).length) local.remove("state");
+      this.setState(localState || this.props.defaults);
     } catch (error) {
       console.log("nothing to restore");
     }
@@ -30,8 +31,10 @@ class Rememberer extends React.Component {
     return (
       <div>
         <div style={{ marginBottom: "1rem" }}>
-          <span style={{ fontSize: "1.2rem" }}>Defaults</span>
-          <ObjectInspector name="default" data={this.defaults} />
+          {this.props.defaults && <div>
+            <span style={{ fontSize: "1.2rem" }}>Defaults</span>
+            <ObjectInspector name="default" data={this.defaults} />
+          </div>}
           <div style={{ fontSize: "1.2rem", paddingTop: "2rem" }}>
             Remembered
             <button
@@ -39,7 +42,7 @@ class Rememberer extends React.Component {
               onClick={this.clearState.bind(this)}
             >
               <span role="img" aria-label="reset">
-                🔄 Reset to defaults
+                {this.props.defaults ? '🔄 Reset to defaults' : '💣 Clear all'}
               </span>
             </button>
           </div>
