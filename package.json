@@ -23,7 +23,8 @@
     "hooks",
     "global",
     "context",
-    "state"
+    "state",
+    "local storage"
   ],
   "dependencies": {
     "local-storage": "1.4.2",
