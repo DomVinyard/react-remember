@@ -90,6 +90,8 @@ View a list of what's been remembered by adding the `show` property to the Remem
 ```js
 <Rememberer show>...</Rememberer>
 ```
+<img src="https://i.imgur.com/VTqPMZG.png" width="480px" />
+
 
 ## FAQ
 
