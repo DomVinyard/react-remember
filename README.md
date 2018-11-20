@@ -85,10 +85,10 @@ Defaults are the values that are instantiated on first launch.
 
 ## Explorer
 
-View a list of what's been remembered by adding the `show` property to the Rememberer. This will also give you a button to reset the memory.
+View a list of what's been remembered by adding the `show` property to the Rememberer.
 
 ```js
-<Rememberer show>...</Rememberer>
+<Rememberer show defaults={{number: 1}}>...</Rememberer>
 ```
 <img src="https://i.imgur.com/VTqPMZG.png" width="480px" />
 
