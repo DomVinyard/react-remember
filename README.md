@@ -1,6 +1,8 @@
 # 🤔 React Remember
 
-> Persistent global state in React using Local Storage, Hooks & Context. ([Demo](https://codesandbox.io/s/nnvzpkjxj))
+> Persistent global state in React 
+>
+> 👉 [Demo](https://codesandbox.io/s/nnvzpkjxj) 👈
 
 [![npm version](https://badge.fury.io/js/react-remember.svg)](https://badge.fury.io/js/react-remember) [![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE)
 
