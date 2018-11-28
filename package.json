@@ -15,9 +15,9 @@
   },
   "author": "Dom Vinyard <dom@daisyjay.com>",
   "bugs": {
-    "url": "https://github.com/DomVinyard/react-remember/issues"
+    "url": "https://github.com/daisyjay/react-remember/issues"
   },
-  "homepage": "https://github.com/DomVinyard/react-remember#readme",
+  "homepage": "https://github.com/daisyjay/react-remember#readme",
   "license": "MIT",
   "keywords": [
     "hooks",
