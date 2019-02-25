@@ -7,7 +7,7 @@ class Rememberer extends React.Component {
   state = {};
 
   componentDidUpdate() {
-    if (!this.state || Object.keys(this.state).length === 0) return
+    if (!this.state || Object.keys(this.state).length === 0) return;
     local.set("state", this.state);
   }
 
@@ -31,10 +31,12 @@ class Rememberer extends React.Component {
     return (
       <div>
         <div style={{ marginBottom: "1rem" }}>
-          {this.props.defaults && <div>
-            <span style={{ fontSize: "1.2rem" }}>Defaults</span>
-            <ObjectInspector name="default" data={this.defaults} />
-          </div>}
+          {this.props.defaults && (
+            <div>
+              <span style={{ fontSize: "1.2rem" }}>Defaults</span>
+              <ObjectInspector name="default" data={this.defaults} />
+            </div>
+          )}
           <div style={{ fontSize: "1.2rem", paddingTop: "2rem" }}>
             Remembered
             <button
@@ -42,7 +44,7 @@ class Rememberer extends React.Component {
               onClick={this.clearState.bind(this)}
             >
               <span role="img" aria-label="reset">
-                {this.props.defaults ? '🔄 Reset to defaults' : '💣 Clear all'}
+                {this.props.defaults ? "🔄 Reset to defaults" : "💣 Clear all"}
               </span>
             </button>
           </div>
@@ -57,7 +59,7 @@ class Rememberer extends React.Component {
   }
 
   render() {
-    const { children, show, defaults } = this.props;
+    const { children, show, defaults, toURL } = this.props;
     this.defaults = defaults || {};
     if (show) return this.renderTree();
     return (
