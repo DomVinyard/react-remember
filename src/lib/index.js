@@ -1,9 +1,20 @@
 import React, { useContext } from "react";
 import local from "local-storage";
 import ObjectInspector from "react-object-inspector";
+import ReactQueryParams from "react-query-params";
 
 const Context = React.createContext();
-class Rememberer extends React.Component {
+
+const isNumeric = num => {
+  if (num.match(/^-{0,1}\d+$/)) {
+    return true;
+  } else if (num.match(/^\d+\.\d+$/)) {
+    return true;
+  } else {
+    return false;
+  }
+};
+class Rememberer extends ReactQueryParams {
   state = {};
 
   componentDidUpdate() {
@@ -15,7 +26,14 @@ class Rememberer extends React.Component {
     try {
       const localState = local.get("state");
       if (localState && !Object.keys(localState).length) local.remove("state");
-      this.setState(localState || this.props.defaults);
+      const params = { ...this.queryParams };
+      Object.entries(this.queryParams).map(([key, value]) => {
+        if (value === "true") params[key] = true;
+        if (value === "false") params[key] = false;
+        if (isNumeric(value)) params[key] = Number(value);
+      });
+
+      this.setState({ ...localState, ...params } || this.props.defaults);
     } catch (error) {
       console.log("nothing to restore");
     }
@@ -59,13 +77,22 @@ class Rememberer extends React.Component {
   }
 
   render() {
-    const { children, show, defaults, toURL } = this.props;
+    const { children, show, defaults, url } = this.props;
     this.defaults = defaults || {};
     if (show) return this.renderTree();
     return (
       <Context.Provider
         value={{
-          useRemember: [this.state, val => this.setState(val)]
+          useRemember: [
+            this.state,
+            val => {
+              this.setState(val);
+              if (url) {
+                console.log("set");
+                this.setQueryParams(val);
+              }
+            }
+          ]
         }}
       >
         {children}

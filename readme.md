@@ -1,6 +1,6 @@
 # 🤔 React Remember
 
-> Persistent global state in React 
+> Persistent global state in React
 >
 > 👉 [Demo](https://codesandbox.io/s/nnvzpkjxj) 👈
 
@@ -29,29 +29,23 @@ This value is saved in local storage and will persist until you change or reset 
 
 ## Installation & Usage
 
-> 🚨🚨🚨 Hooks are a new feature proposal that lets you use state and other React features without writing a class. They’re currently in React v16.7.0-alpha and being discussed in [an open RFC](https://github.com/reactjs/rfcs/pull/68). **If you're using a React version < 16.7, this module will not work.** 🚨🚨🚨
-
 Install with `yarn add react-remember` or `npm install react-remember`.
 
 Wrap your top-level app with the Rememberer™:
 
 ```js
-import Rememberer from ‘react-remember’
+import Rememberer from "react-remember";
 
 const App = () => {
-    return (
-        <Rememberer>
-            // standard app.js stuff in here
-        </Rememberer>
-    )
-}
-ReactDOM(<App />, root)
+  return <Rememberer>// standard app.js stuff in here</Rememberer>;
+};
+ReactDOM(<App />, root);
 ```
 
 Now you can useRemember in any component. The data will be available everywhere, updatable from anywhere and will persist between refreshes.
 
 ```js
-import { useRemember } from ‘react-remember’
+import { useRemember } from "react-remember";
 
 const Button = () => {
   const [the, remember] = useRemember();
@@ -68,9 +62,17 @@ const Info = () => {
 };
 ```
 
+## Save to url (experimental)
+
+The url parameter will store the state in the url as a query string rather than local storage.
+
+```js
+<Rememberer url>...</Rememberer>
+```
+
 ## Defaults
 
-Defaults are the values that are instantiated on first launch. 
+Defaults are the values that are instantiated on first launch.
 
 ```js
 <Rememberer
@@ -88,10 +90,12 @@ Defaults are the values that are instantiated on first launch.
 View a list of what's been remembered by adding the `show` property to the Rememberer.
 
 ```js
-<Rememberer show defaults={{number: 1}}>...</Rememberer>
+<Rememberer show defaults={{ number: 1 }}>
+  ...
+</Rememberer>
 ```
-<img src="https://i.imgur.com/VTqPMZG.png" width="480px" />
 
+<img src="https://i.imgur.com/VTqPMZG.png" width="480px" />
 
 ## FAQ
 

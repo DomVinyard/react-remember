@@ -15,7 +15,7 @@ const Button = () => {
 
 const App = () => {
   return (
-    <Rememberer defaults={{ number: 1 }}>
+    <Rememberer url defaults={{ number: 1 }}>
       <h1>number</h1>
       <Number />
       <Number />
