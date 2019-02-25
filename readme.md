@@ -1,10 +1,10 @@
 # 🤔 React Remember
 
-> Persistent global state in React using Local Storage, Hooks & Context. ([Demo](https://codesandbox.io/s/nnvzpkjxj))
+> Persistent global state in React 
+>
+> 👉 [Demo](https://codesandbox.io/s/nnvzpkjxj) 👈
 
 [![npm version](https://badge.fury.io/js/react-remember.svg)](https://badge.fury.io/js/react-remember) [![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE)
-
-## Quick start
 
 Include the useRemember hook in a component:
 
@@ -85,11 +85,13 @@ Defaults are the values that are instantiated on first launch.
 
 ## Explorer
 
-View a list of what's been remembered by adding the `show` property to the Rememberer. This will also give you a button to reset the memory.
+View a list of what's been remembered by adding the `show` property to the Rememberer.
 
 ```js
-<Rememberer show>...</Rememberer>
+<Rememberer show defaults={{number: 1}}>...</Rememberer>
 ```
+<img src="https://i.imgur.com/VTqPMZG.png" width="480px" />
+
 
 ## FAQ
 
