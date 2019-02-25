@@ -64,7 +64,7 @@ const Info = () => {
 
 ## Save to url (experimental)
 
-The url parameter will store the state in the url as a query string rather than local storage.
+The url parameter will store the state in the url as a query string rather than local storage.npm
 
 ```js
 <Rememberer url>...</Rememberer>
