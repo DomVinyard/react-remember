@@ -5,21 +5,17 @@ import ReactQueryParams from "react-query-params";
 
 const Context = React.createContext();
 
-const isNumeric = num => {
-  if (num.match(/^-{0,1}\d+$/)) {
-    return true;
-  } else if (num.match(/^\d+\.\d+$/)) {
-    return true;
-  } else {
-    return false;
-  }
-};
+const isNumeric = num => num.match(/^-{0,1}\d+$/) || num.match(/^\d+\.\d+$/);
 class Rememberer extends ReactQueryParams {
   state = {};
 
+  rememberState() {
+    if (!this.url) local.set("state", this.state);
+  }
+
   componentDidUpdate() {
     if (!this.state || Object.keys(this.state).length === 0) return;
-    local.set("state", this.state);
+    this.rememberState();
   }
 
   componentDidMount() {
@@ -38,7 +34,7 @@ class Rememberer extends ReactQueryParams {
         ...qparams
       };
       this.setState(initialState);
-      local.set("state", initialState);
+      if (!this.url) local.set("state", initialState);
     } catch (error) {
       console.log("nothing to restore");
     }
@@ -84,6 +80,7 @@ class Rememberer extends ReactQueryParams {
   render() {
     const { children, show, defaults, url } = this.props;
     this.defaults = defaults || {};
+    this.url = url;
     if (show) return this.renderTree();
     return (
       <Context.Provider
@@ -93,7 +90,6 @@ class Rememberer extends ReactQueryParams {
             val => {
               this.setState(val);
               if (url) {
-                console.log("set");
                 this.setQueryParams(val);
               }
             }

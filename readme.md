@@ -37,7 +37,7 @@ Wrap your top-level app with the Rememberer™:
 import Rememberer from "react-remember";
 
 const App = () => {
-  return <Rememberer>// standard app.js stuff in here</Rememberer>;
+  return <Rememberer>{/* normal app.js stuff */}</Rememberer>;
 };
 ReactDOM(<App />, root);
 ```
@@ -45,8 +45,8 @@ ReactDOM(<App />, root);
 Now you can useRemember in any component. The data will be available everywhere, updatable from anywhere and will persist between refreshes.
 
 ```js
+// Button.js
 import { useRemember } from "react-remember";
-
 const Button = () => {
   const [the, remember] = useRemember();
   return (
@@ -56,15 +56,17 @@ const Button = () => {
   );
 };
 
+// Info.js
+import { useRemember } from "react-remember";
 const Info = () => {
   const [the, remember] = useRemember();
   return <div>Button clicked {the.count} times</div>;
 };
 ```
 
-## Save to url (experimental)
+## Save to URL
 
-The url parameter will store the state in the url as a query string rather than local storage.npm
+The url parameter will store the state in the url.
 
 ```js
 <Rememberer url>...</Rememberer>
