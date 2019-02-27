@@ -66,7 +66,7 @@ const Info = () => {
 
 ## Save to URL
 
-The url parameter will store the state in the url.
+The `url` prop will store the state in the url rather than localstorage.
 
 ```js
 <Rememberer url>...</Rememberer>
