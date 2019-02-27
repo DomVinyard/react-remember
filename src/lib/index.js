@@ -9,13 +9,9 @@ const isNumeric = num => num.match(/^-{0,1}\d+$/) || num.match(/^\d+\.\d+$/);
 class Rememberer extends ReactQueryParams {
   state = {};
 
-  rememberState() {
-    if (!this.url) local.set("state", this.state);
-  }
-
   componentDidUpdate() {
     if (!this.state || Object.keys(this.state).length === 0) return;
-    this.rememberState();
+    if (!this.url) local.set("state", this.state);
   }
 
   componentDidMount() {
