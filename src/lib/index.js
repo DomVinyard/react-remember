@@ -26,14 +26,19 @@ class Rememberer extends ReactQueryParams {
     try {
       const localState = local.get("state");
       if (localState && !Object.keys(localState).length) local.remove("state");
-      const params = { ...this.queryParams };
+      const qparams = { ...this.queryParams };
       Object.entries(this.queryParams).map(([key, value]) => {
-        if (value === "true") params[key] = true;
-        if (value === "false") params[key] = false;
-        if (isNumeric(value)) params[key] = Number(value);
+        if (value === "true") qparams[key] = true;
+        if (value === "false") qparams[key] = false;
+        if (isNumeric(value)) qparams[key] = Number(value);
       });
-
-      this.setState({ ...localState, ...params } || this.props.defaults);
+      const initialState = {
+        ...this.props.defaults,
+        ...localState,
+        ...qparams
+      };
+      this.setState(initialState);
+      local.set("state", initialState);
     } catch (error) {
       console.log("nothing to restore");
     }
